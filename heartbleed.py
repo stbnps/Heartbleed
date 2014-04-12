@@ -56,7 +56,7 @@ that is, if we send "abcd" the server will return "abcd".
 The flaw is triggered when we tell the server that we are sending a message that is X bytes long
 (64 kB in this case), but we send a shorter message; OpenSSL won't check if we really sent the X bytes of data.
 
-The server will store our X byte long message, then read the X bytes of data from its memory
+The server will store our message, then read the X bytes of data from its memory
 (it reads the memory region where our message is supposedly stored) and send that read message back.
 
 Because we didn't send any message at all
