@@ -37,7 +37,7 @@ helloPacket = (
 '01 00 00 2d'	 # Message type = 01 (client hello); Length = 00 00 2d
 				 # ClientHello:
 '03 02' 		 # Client version = 03 02 (TLS 1.1)
-				 # Random:
+				 # Random (uint32 time followed by 28 random bytes):
 '50 0b af bb b7 5a b8 3e f0 ab 9a e3 f3 9c 63 15 33 41 37 ac fd 6c 18 1a 24 60 dc 49 67 c2 fd 96'
 '00' 			 # Session id = 00
 '00 04 ' 		 # Cipher suite length
